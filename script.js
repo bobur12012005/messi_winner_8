@@ -99,7 +99,7 @@ for (let company of companies) {
 
     company.expensesPerMonth = 0
     company.monthlyProfit = 0
-    company.copanyCondition = ""
+    company.companyCondition = ""
 
     for (let number of company.expensesPerYear) {
         company.expensesPerMonth += Math.round(number / 12)
@@ -111,10 +111,10 @@ for (let company of companies) {
 
     if (company.monthlyProfit > 0) {
         forBenefit.push(`Name of the company: ${company.name}; Profit of the Company per month: ${company.monthlyProfit}`)
-        company.copanyCondition = "Normal"
+        company.companyCondition = "Normal"
     } else {
         forDrawback.push(`Name of the company: ${company.name}; Profit of the Company per month: ${company.monthlyProfit}`)
-        company.copanyCondition = "Abnormal"
+        company.companyCondition = "Abnormal"
     }
 
 }
